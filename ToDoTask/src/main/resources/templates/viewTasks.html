@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head><title>View Tasks</title></head>
+<body>
+<h2>Your Tasks</h2>
+<table border="1">
+    <tr><th>Task ID</th><th>Description</th></tr>
+    <tr th:each="task : ${tasks}">
+        <td th:text="${task.id}"></td>
+        <td th:text="${task.task}"></td>
+    </tr>
+</table>
+<a th:href="@{/task/home}">Back to Home</a>
+</body>
+</html>

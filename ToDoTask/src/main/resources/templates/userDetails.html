@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>User Details</title>
+</head>
+<body>
+    <h2>User Details</h2>
+    <table border="1">
+        <tr>
+            <th>Name</th>
+            <td th:text="${user.name}"></td>
+        </tr>
+        <tr>
+            <th>Email</th>
+            <td th:text="${user.email}"></td>
+        </tr>
+        <tr>
+            <th>Gender</th>
+            <td th:text="${user.gender}"></td>
+        </tr>
+        <tr>
+            <th>Phone Number</th>
+            <td th:text="${user.phno}"></td>
+        </tr>
+    </table>
+
+    <br/>
+    <a th:href="@{/task/home}">Back to Home</a>
+</body>
+</html>

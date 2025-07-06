@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Search Flights</title>
+</head>
+<body>
+<h2>Search Flights</h2>
+<form action="#" th:action="@{/search-flights}" method="get">
+    Source: <input type="text" name="source"><br>
+    Destination: <input type="text" name="destination"><br>
+    Departure Date: <input type="date" name="departureDate"><br>
+    <button type="submit">Search</button>
+</form>
+
+<div th:if="${flights != null}">
+    <h3>Available Flights:</h3>
+    <table border="1">
+        <tr>
+            <th>Airline</th>
+            <th>Departure</th>
+            <th>Time</th>
+            <th>Price</th>
+            <th>Seats</th>
+        </tr>
+        <tr th:each="flight : ${flights}">
+            <td th:text="${flight.airline}"></td>
+            <td th:text="${flight.departureDate}"></td>
+            <td th:text="${flight.departureTime}"></td>
+            <td th:text="${flight.price}"></td>
+            <td th:text="${flight.availableSeats}"></td>
+        </tr>
+    </table>
+</div>
+
+<a href="/search-flights">Search Flights</a> |
+<a href="/book-flight">Book Flight</a> |
+<a href="/my-bookings">My Bookings</a>
+
+</body>
+</html>

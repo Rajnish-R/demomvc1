@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>My Bookings</title>
+</head>
+<body>
+<h2>Find My Bookings</h2>
+<form action="#" th:action="@{/my-bookings}" method="get">
+    Enter your email: <input type="email" name="email"><br>
+    <button type="submit">Get Bookings</button>
+</form>
+
+<div th:if="${bookings != null}">
+    <h3>Your Bookings:</h3>
+    <table border="1">
+        <tr>
+            <th>Flight</th>
+            <th>Date</th>
+            <th>Seats</th>
+        </tr>
+        <tr th:each="b : ${bookings}">
+            <td th:text="${b.flight.airline}"></td>
+            <td th:text="${b.bookingDate}"></td>
+            <td th:text="${b.noOfSeats}"></td>
+        </tr>
+    </table>
+</div>
+
+<a href="/search-flights">Search Flights</a> |
+<a href="/book-flight">Book Flight</a> |
+<a href="/my-bookings">My Bookings</a>
+
+</body>
+</html>
