@@ -13,7 +13,7 @@ spring:
 #spring:
 #  data:
 #    mongodb:
-#      uri: mongodb+srv://spingproject90871536:Punr5mCuCOVF9abc9b@cluster0.tdfnqqjo.mongodb.net/?retryWrites=true&w=majority&apnapName=Cluster0
+#      uri: mongodb+srv://spingproject90871536:Punr45mCuCOVF9abc9b@cluster0.tdfnqqjo.mongodb.net/?retryWrites=true&w=majority&apnapName=Cluster0
 #      database: journaldb
 #      auto-index-creation: true
 #
